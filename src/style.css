@@ -3,7 +3,7 @@
 }
 :root {
   --font-color: #333333;
-  --font-blue: blue;
+  --font-blue: darkblue;
   --font-style: "IBM Plex Mono", monospace;
 }
 html {
@@ -19,11 +19,11 @@ body {
 
 .nav-list {
   list-style: none;
-  font-size: 2.15rem;
+  font-size: 1.15rem;
   color: var(--font-blue);
 }
 .nav-numbers {
-  font-size: 1.25rem;
+  font-size: 4rem;
 }
 
 .nav-wrapper {
@@ -60,12 +60,15 @@ About Section
   font-size: 2rem;
 }
 
-.description-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 0.5fr;
-  grid-template-rows: 1fr 1fr;
+.about {
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.description-wrapper {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .social-media {
@@ -74,8 +77,8 @@ About Section
 }
 
 .links {
-  list-style: none;
   text-decoration: underline;
   color: var(--font-blue);
   padding-right: 40px;
+  cursor: pointer;
 }
