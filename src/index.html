@@ -2,12 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/main.js" defer></script>
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <nav class="nav-container">
+      <ul class="nav-wrapper">
+        <li class="nav-list"><span class="nav-numbers">01.</span>about</li>
+        <li class="nav-list"><span class="nav-numbers">02.</span>skills</li>
+        <li class="nav-list"><span class="nav-numbers">03.</span>projects</li>
+      </ul>
+    </nav>
+    <main class="main">
+      <div class="dots"></div>
+      <section class="about">
+        <h1 class="section-title">about</h1>
+        <div class="description-wrapper">
+          <p class="intro">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores
+            ipsa doloremque minima molestias ex, et explicabo, rem ipsam est
+            rerum illo officiis deleniti sint ipsum iure quas, cumque autem
+            aliquid.
+          </p>
+          <img src="/portrait.JPG" width="250px" height="170px" />
+          <ul class="social-media">
+            <li class="links"><a>github</a></li>
+            <li class="links"><a>linkedin</a></li>
+            <li class="links"><a>twitter</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
