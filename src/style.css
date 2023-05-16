@@ -3,7 +3,7 @@
 }
 :root {
   --font-color: #333333;
-  --font-blue: darkblue;
+  --font-blue: blue;
   --font-style: "IBM Plex Mono", monospace;
 }
 html {
@@ -39,7 +39,7 @@ body {
   margin-right: 10%;
   margin-top: 20px;
   height: 400vh;
-  overflow-x: hidden;
+  display: flex;
 }
 
 .dots {
@@ -57,12 +57,12 @@ About Section
 */
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2.15rem;
+  color: var(--font-blue);
 }
 
 .about {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 5% 5% 0 5%;
 }
 
 .description-wrapper {
