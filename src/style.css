@@ -4,7 +4,8 @@
 :root {
   --font-color: #333333;
   --font-blue: blue;
-  --font-style: "IBM Plex Mono", monospace;
+  --font-style-ibm: "IBM Plex Mono", monospace;
+  --font-style: Helvetica;
   --section-margin: 5% 5% 0 5%
 }
 html {
@@ -14,15 +15,32 @@ html {
 body {
   margin: 0;
   font-family: var(--font-style);
+  height: 400vh;
 }
 
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.desc-wrapper {
+  display: inline-block;
+  display: flex;
+  justify-content: end;
+  overflow: hidden;
+}
+
+.nav-desc {
+  transform: translateY(20px)
+}
 .nav-list {
   list-style: none;
   font-size: 1.15rem;
   color: var(--font-blue);
 }
 .nav-numbers {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bold;
 }
 
@@ -32,8 +50,10 @@ body {
   padding: 0;
   margin-left: 10%;
   margin-right: 10%;
+  overflow: hidden;
 }
 .main {
+  font-family: var(--font-style-ibm);
   position: relative;
   margin-left: 10%;
   margin-right: 10%;
@@ -57,7 +77,9 @@ body {
 /*
 About Section
 */
-
+.section-wrapper {
+  overflow: hidden;
+}
 .section-title {
   font-size: 3.15rem;
   font-weight: 400;
