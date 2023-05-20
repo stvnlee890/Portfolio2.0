@@ -50,6 +50,12 @@ body {
   margin-right: 10%;
   overflow: hidden;
 }
+
+.nav-word {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
 .main {
   font-family: var(--font-style-ibm);
   position: relative;
@@ -122,6 +128,7 @@ a:visited {
 
 .intro-desc {
   font-weight: bold;
+  font-family: var(--font-style);
 }
 
 .img-container {
@@ -130,6 +137,7 @@ a:visited {
   overflow: hidden;
   background-color: blue;
   display: inline-block;
+  align-self: end;
 }
 
 .portrait {
