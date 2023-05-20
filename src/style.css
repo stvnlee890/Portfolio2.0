@@ -6,7 +6,7 @@
   --font-blue: blue;
   --font-style-ibm: "IBM Plex Mono", monospace;
   --font-style: Helvetica;
-  --section-margin: 5% 5% 0 5%
+  --section-margin: 5% 5% 0 5%;
 }
 html {
   font-family: Helvetica, sans-serif;
@@ -15,24 +15,22 @@ html {
 body {
   margin: 0;
   font-family: var(--font-style);
-  height: 400vh;
+  height: 100%;
+  /* overflow: hidden; */
 }
 
-
-.nav-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 .desc-wrapper {
   display: inline-block;
-  display: flex;
-  justify-content: end;
   overflow: hidden;
 }
 
+.desc-container {
+  position: fixed;
+  z-index: 1;
+}
+
 .nav-desc {
-  transform: translateY(20px)
+  transform: translateY(20px);
 }
 .nav-list {
   list-style: none;
@@ -61,6 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: scale(0.75, 0.75);
   /* height: 400%; */
 }
 
@@ -125,10 +124,18 @@ a:visited {
   font-weight: bold;
 }
 
+.img-container {
+  height: 170px;
+  width: 250px;
+  overflow: hidden;
+  background-color: blue;
+  display: inline-block;
+}
 
 .portrait {
   display: block;
   margin: 0 auto;
+  opacity: 0;
 }
 
 /*
