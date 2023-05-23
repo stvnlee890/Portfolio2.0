@@ -14,7 +14,6 @@ export function navScrollAnimation(element, direction) {
     gsap.to(element, { y: -30, delay: 0.2 });
   } else {
     gsap.to(element, { y: 0, delay: 0.2 });
-    // gsap.fromTo(element, { y: -20 }, { y:0 })
   }
 }
 
