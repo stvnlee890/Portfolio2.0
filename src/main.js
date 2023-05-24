@@ -2,19 +2,19 @@ import {
   navDescAnimation,
   navScrollAnimation,
   scaleMain,
-  animatePortrait,
   animatePortraitContainer
 } from "./animations/animations";
 
 const navEle = document.querySelectorAll(".nav-desc");
 const main = document.querySelector(".main");
-const portrait = document.querySelector(".portrait");
 const portraitContainer = document.querySelector('.img-container')
+const navWords = document.querySelectorAll('.nav-word')
+console.log(navWords)
+
 
 navDescAnimation(navEle);
 scaleMain(main);
-// animatePortrait(portrait);
-animatePortraitContainer(portraitContainer, portrait)
+animatePortraitContainer(portraitContainer)
 let prevScroll = 0;
 
 window.addEventListener("scroll", (e) => {
@@ -26,3 +26,4 @@ window.addEventListener("scroll", (e) => {
     navScrollAnimation(navEle, true);
   }
 });
+

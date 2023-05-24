@@ -1,6 +1,6 @@
 import { gsap, Power4 } from "gsap";
 
-const tl = gsap.timeline();
+
 export function navDescAnimation(element) {
   gsap.to(element, {
     y: 0,
@@ -45,9 +45,7 @@ export function animatePortrait(element) {
   );
 }
 
-// export function animatePortraitContainer(element1, element2) {
-//   gsap.to(element1, { height: "0", delay: 2, ease: Power4.easeInOut, duration: 1 });
-// }
-export function animatePortraitContainer(element1, element2) {
+export function animatePortraitContainer(element1) {
   gsap.fromTo(element1, { height: 0 }, { height: 170, delay: 2, ease: Power4.easeInOut, duration: 1 });
 }
+
