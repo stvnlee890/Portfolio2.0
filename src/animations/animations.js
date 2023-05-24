@@ -1,5 +1,6 @@
 import { gsap, Power4 } from "gsap";
 
+const tl = gsap.timeline();
 export function navDescAnimation(element) {
   gsap.to(element, {
     y: 0,
@@ -27,17 +28,26 @@ export function scaleMain(element) {
   });
 }
 
-export function animatePortrain(element) {
-    gsap.fromTo(element, {
-        y: 200,
-        opacity: 0
+export function animatePortrait(element) {
+  gsap.fromTo(
+    element,
+    {
+      y: 200,
+      opacity: 0,
     },
     {
-        y: 0,
-        opacity: 1,
-        ease: Power4.easeInOut,
-        duration: 2,
-        delay: 1.5
+      y: 0,
+      opacity: 1,
+      ease: Power4.easeInOut,
+      duration: 2,
+      delay: 1.5,
     }
-    )
+  );
+}
+
+// export function animatePortraitContainer(element1, element2) {
+//   gsap.to(element1, { height: "0", delay: 2, ease: Power4.easeInOut, duration: 1 });
+// }
+export function animatePortraitContainer(element1, element2) {
+  gsap.fromTo(element1, { height: 0 }, { height: 170, delay: 2, ease: Power4.easeInOut, duration: 1 });
 }

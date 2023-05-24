@@ -2,17 +2,19 @@ import {
   navDescAnimation,
   navScrollAnimation,
   scaleMain,
-  animatePortrain,
+  animatePortrait,
+  animatePortraitContainer
 } from "./animations/animations";
 
 const navEle = document.querySelectorAll(".nav-desc");
 const main = document.querySelector(".main");
 const portrait = document.querySelector(".portrait");
+const portraitContainer = document.querySelector('.img-container')
 
 navDescAnimation(navEle);
 scaleMain(main);
-animatePortrain(portrait);
-
+// animatePortrait(portrait);
+animatePortraitContainer(portraitContainer, portrait)
 let prevScroll = 0;
 
 window.addEventListener("scroll", (e) => {
