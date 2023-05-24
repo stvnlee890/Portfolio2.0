@@ -139,10 +139,11 @@ a:visited {
 
 
 .img-container {
-  height: 170px;
+  height: 0px;
   width: 250px;
   overflow: hidden;
   display: inline-block;
+
   /* align-self: center; */
 }
 
