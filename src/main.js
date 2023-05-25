@@ -29,12 +29,9 @@ window.addEventListener("scroll", (e) => {
 
 /* 
 Create empty array to store y vals of element after 3 sec timeout since animation takes some time
-add a window.onBeforeunload to scroll to top page when user refresh page so that yVals don't mess up
+add a window.onBeforeunload to scroll to top page when user refresh page so that yVals don't mess up.
+However, if I want to navigate to another html, this causes the page to "flash"
 */
-
-// archivesLink.addEventListener("click", (e) => {
-//   e.preventDefault();
-// });
 
 window.onbeforeunload = function (e) {
   window.scrollTo(0, 0);
@@ -64,26 +61,3 @@ navWords.forEach((ele, index) => {
 });
 
 
-
-// const route = (event) => {
-//   event = event || window.event
-//   event.preventDefault()
-//   window.history.pushState({}, "", event.target.href)
-// }
-
-// const routes = {
-//   "/": "./index.html",
-//   "/archives": "./archives.html"
-// }
-
-// const handleLocation = async () => {
-//   const path = window.location.pathname
-//   console.log(path)
-//   const route = routes[path]
-//   const html = await fetch(route).then((data) => data.text())
-//   document.querySelector('body').innerHTML = html
-
-// }
-
-// window.route = route;
-// handleLocation()
