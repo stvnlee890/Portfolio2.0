@@ -31,9 +31,17 @@ window.addEventListener("scroll", (e) => {
 Create empty array to store y vals of element after 3 sec timeout since animation takes some time
 add a window.onBeforeunload to scroll to top page when user refresh page so that yVals don't mess up.
 However, if I want to navigate to another html, this causes the page to "flash"
+SOLUTION
+remove listener when clicked!!!
 */
 
+archivesLink.addEventListener('click', (e) => {
+  console.log(e)
+  window.onbeforeunload = null;
+})
+
 window.onbeforeunload = function (e) {
+  e.preventDefault()
   window.scrollTo(0, 0);
 };
 
