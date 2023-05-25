@@ -92,10 +92,15 @@ About Section
   font-size: 3.15rem;
   font-weight: 400;
   color: var(--font-blue);
+  border: 1px solid var(--font-blue);
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 section {
   padding: var(--section-margin);
+  margin: 0 auto;
   /* height: 100vh; */
 }
 
