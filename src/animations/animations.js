@@ -1,6 +1,5 @@
 import { gsap, Power4 } from "gsap";
 
-
 export function navDescAnimation(element) {
   gsap.to(element, {
     y: 0,

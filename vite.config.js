@@ -1,3 +1,5 @@
+import path from 'path'
+
 export default {
     root: 'src/',
     publicDir: '../static',
@@ -10,4 +12,5 @@ export default {
         outDir: '../dist',
         sourcemap: true,
     },
+
 }

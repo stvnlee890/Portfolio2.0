@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --font-color: #333333;
+  --font-blue: blue;
+  --font-style-ibm: "IBM Plex Mono", monospace;
+  --font-style: Helvetica;
+  --section-margin: 5% 5% 0 5%;
+}
+html {
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.main {
+  font-family: var(--font-style-ibm);
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dots {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#b7b7b7 6%, transparent 2%);
+  background-size: 10px 10px;
+  background-repeat: repeat;
+  position: absolute;
+  z-index: -5;
+}
+
+.archives {
+  height: 100vh;
+  padding: var(--section-margin);
+}
+
+.section-title {
+    color: var(--font-blue);
+    font-size: 3.15rem;
+}
+a:visited {
+    text-decoration: none;
+    color: var(--font-blue);
+  }
+
+.archive-projects {
+    font-size: 2rem;
+    grid-column: span 1;
+}
+.archives-list-container {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+}
+.archive-links {
+    font-size: 2rem
+}
+
+li {
+    list-style: none;
+}
+
+
+
