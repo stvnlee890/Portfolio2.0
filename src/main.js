@@ -49,7 +49,7 @@ const yVal = [];
 
 setTimeout(() => {
   sectionHeaders.forEach((ele, index) => {
-    console.log(ele.getBoundingClientRect().y);
+    // console.log(ele.getBoundingClientRect().y);
     if (index === 0) {
       yVal.push(0);
     } else {

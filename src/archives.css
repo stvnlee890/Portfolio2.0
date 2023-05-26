@@ -45,6 +45,13 @@ body {
 .section-title {
     color: var(--font-blue);
     font-size: 3.15rem;
+    border: 1px solid var(--font-blue);
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px;
+}
+a {
+  display: block;
 }
 a:visited {
     text-decoration: none;
@@ -57,7 +64,7 @@ a:visited {
 }
 .archives-list-container {
     display: grid;
-    grid-template-columns: .5fr 1fr;
+    /* grid-template-columns: .5fr 1fr; */
 }
 .archive-links {
     font-size: 2rem
