@@ -14,9 +14,15 @@ ul.className = "list-wrapper"
 const columnsNums = Object.keys(archivedProjects[0]).length
 const rowNums = archivedProjects.length
 
+/*
+Create sizes for grid
+*/
 ul.style.gridTemplateColumns = `.2fr .5fr .5fr .2fr .2fr`
 ul.style.gridTemplateRows = `repeat(${rowNums}, 1fr)`
 
+/*
+Assign the categories to each column
+*/
 descriptors.forEach((ele, index) => {
   const descLi = document.createElement("li")
   descLi.className = "archive-descriptors"
@@ -25,6 +31,11 @@ descriptors.forEach((ele, index) => {
   ul.append(descLi)
 })
 
+/*
+Assign the values inside archiveProjects array to each grid dynamically.
+Now this is set up, I don't need to worry about styling whenever 
+adding new archived projects
+*/
 archivedProjects.forEach((ele, index) => {
   const yearLi = document.createElement("li")
   yearLi.className = "archive-year"

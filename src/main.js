@@ -22,6 +22,14 @@ reset these values to allow user scrolling
 body.style.height = "100%";
 body.style.overflow = "hidden";
 
+/*
+unload event listener does not cause the page to "flash", seems to work 
+better than onbeforeunload
+*/
+window.addEventListener("unload", () => {
+  window.scrollTo(0, 0);
+})
+
 navDescAnimation(navEle);
 scaleMain(main);
 animatePortraitContainer(portraitContainer);
@@ -44,15 +52,16 @@ However, if I want to navigate to another html, this causes the page to "flash"
 SOLUTION
 remove listener when clicked!!!
 */
-archivesLink.addEventListener("click", (e) => {
-  console.log(e);
-  window.onbeforeunload = null;
-});
+// archivesLink.addEventListener("click", (e) => {
+//   window.onbeforeunload = null;
+// });
 
-window.onbeforeunload = function (e) {
-  e.preventDefault();
-  window.scrollTo(0, 0);
-};
+
+
+// window.onbeforeunload = function (e) {
+//   e.preventDefault();
+//   window.scrollTo(0, 0);
+// };
 
 const yVal = [];
 
