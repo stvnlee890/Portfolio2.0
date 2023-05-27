@@ -39,7 +39,6 @@ export function animatePortrait(element) {
       opacity: 1,
       ease: Power4.easeInOut,
       duration: 2,
-      delay: 1.5,
     }
   );
 }
