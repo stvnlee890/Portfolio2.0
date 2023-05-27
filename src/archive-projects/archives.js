@@ -1,19 +1,4 @@
-const archivedProjects = [
-  {
-    year: '2022',
-    name: "project 1",
-    builtWith: "React, Node",
-    link: "https://github.com/",
-    liveSite: 'https://wikipedia.com/'
-  },
-  {
-    year: '2022',
-    name: 'project 2',
-    builtWith: "React, Node",
-    link: "https://github.com/",
-    liveSite: 'https://wikipedia.com/'
-  },
-];
+import { archivedProjects } from "./archivesList";
 
 const descriptors = [
   "year", "title", "built-with", "links"
@@ -42,7 +27,7 @@ descriptors.forEach((ele, index) => {
 
 archivedProjects.forEach((ele, index) => {
   const yearLi = document.createElement("li")
-  yearLi.className = "archive-projects"
+  yearLi.className = "archive-year"
   yearLi.style.gridRowStart = `${index + 2}`
   yearLi.innerText = ele.year
   ul.append(yearLi)

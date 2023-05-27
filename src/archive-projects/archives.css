@@ -61,6 +61,13 @@ a:visited {
 /*
 GRID
 */
+.archives-list-container {
+  margin-top: 5%
+}
+
+.archive-year {
+  font-weight: bold
+}
 
 .archive-descriptors {
   color: var(--font-blue);
