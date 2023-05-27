@@ -5,12 +5,22 @@ import {
   animatePortraitContainer,
 } from "./animations/animations";
 
+const body = document.querySelector("body");
 const navEle = document.querySelectorAll(".nav-desc");
 const main = document.querySelector(".main");
 const portraitContainer = document.querySelector(".img-container");
 const navWords = document.querySelectorAll(".nav-word");
 const sectionHeaders = document.querySelectorAll(".section-title");
 const archivesLink = document.querySelector(".archives-link");
+
+/*
+Add style on page load to prevent users from scrolling until initial 
+animation finished. This prevents y position of each element from 
+being altered by user scroll. Then on the setTimeout function,
+reset these values to allow user scrolling
+*/
+body.style.height = "100%";
+body.style.overflow = "hidden";
 
 navDescAnimation(navEle);
 scaleMain(main);
@@ -34,14 +44,13 @@ However, if I want to navigate to another html, this causes the page to "flash"
 SOLUTION
 remove listener when clicked!!!
 */
-
-archivesLink.addEventListener('click', (e) => {
-  console.log(e)
+archivesLink.addEventListener("click", (e) => {
+  console.log(e);
   window.onbeforeunload = null;
-})
+});
 
 window.onbeforeunload = function (e) {
-  e.preventDefault()
+  e.preventDefault();
   window.scrollTo(0, 0);
 };
 
@@ -56,7 +65,9 @@ setTimeout(() => {
       yVal.push(ele.getBoundingClientRect().y);
     }
   });
-}, 3000);
+  body.style.height = "";
+  body.style.overflow = "";
+}, 2700);
 
 navWords.forEach((ele, index) => {
   ele.addEventListener("click", () => {
@@ -67,5 +78,3 @@ navWords.forEach((ele, index) => {
     });
   });
 });
-
-
