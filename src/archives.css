@@ -62,22 +62,16 @@ a:visited {
 GRID
 */
 
-.archives-list-container {
-    display: grid;
-    /* grid-template-columns: .5fr 1fr; */
+.archive-descriptors {
+  color: var(--font-blue);
+  font-weight: bold;
+  padding: 10px 0px 20px 0px
 }
-
 .list-wrapper {
   display: grid;
+  padding: 0
 }
 
-.row-1 {
-  grid-row: span 1;
-}
-
-.row-2 {
-  grid-row: span 2;
-}
 
 li {
     list-style: none;
