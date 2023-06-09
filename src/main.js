@@ -63,7 +63,7 @@ navWords.forEach((ele, index) => {
   ele.addEventListener("click", () => {
     // console.log(yVal, sectionHeaders[index].innerHTML);
     window.scrollTo({
-      top: yVal[index],
+      top: yVal[index] - 20,
       behavior: "smooth",
     });
   });
